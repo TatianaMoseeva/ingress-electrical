@@ -1,0 +1,124 @@
+.works {
+    padding-top: 80px;
+    padding-bottom: 130px;
+    
+    &__carousel {
+        margin-top: 70px;
+        
+    }
+    &__items {
+        width: 950px;
+        margin: 0 auto;
+        position: relative;
+    }
+    &__photos {
+        width: 280px;
+        height: 240px;
+        margin: 0 auto;
+        position: relative;
+        
+        .slick-dots {
+            display: flex;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            align-items: center;
+            justify-content: center;
+            li {
+                list-style-type: none;
+                margin: 0 7px;
+            }
+            button {
+                font-size: 0;
+                width: 10px;
+                height: 10px;
+                background-color: #fff;
+                border-radius: 100%;
+                border: none;
+                cursor: pointer;
+            }
+            .slick-active {
+                button {
+                    background-color: $yellow_color;
+                }
+            }      
+        }
+    }
+    &__photo {
+        width: 280px;
+        height: 240px;
+        margin: 0 auto;
+        img {
+            width: 100%;  
+        }
+    }
+    &__desc {
+        width: 280px;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 21px;
+        &-title {
+            margin-top: 24px;
+            font-weight: 600;
+        }
+        &-text {
+            margin-top: 8px;
+            width: 224px;
+        }
+    }
+    .slick-prev, .slick-next {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        z-index: 2;
+        bottom: -25%;
+        cursor: pointer;
+        width: 120px;
+        height: 30px;
+        background: $yellow_color;
+        border-radius: 5px;
+        img {
+            width: 20px;
+        }
+        &:hover {
+            background: #FFF25E;
+        }
+        &_small {
+            width: 30px;
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            top: 45%;
+            cursor: pointer;
+            img {
+                width: 30px;
+                height: 30px;
+            }
+            &:hover {
+                background: transparent;
+            }
+        }
+    }
+    .slick-prev {
+        left: 30%;
+        &_small {
+            left: 5px;
+        }
+    }
+    .slick-next {   
+        right: 30%;
+        &_small {
+            right: 5px;
+        }
+    }
+}
+    .arrow_wrap{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 14px;
+        line-height: 35px;
+        text-transform: uppercase;
+        
+}

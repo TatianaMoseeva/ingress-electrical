@@ -1,0 +1,42 @@
+@import 'libs/fonts';
+@import 'libs/slick';
+@import 'base/variables';
+
+* {
+    font-family: 'Lato Regular', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: $dark_blue;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+    position: relative;
+}
+p {
+    margin: 0;
+}
+h2 {
+    font-family: 'Lato Bold', sans-serif;  
+}
+
+
+@import 'blocks/btn';
+@import 'blocks/title';
+@import 'blocks/promo';
+@import 'blocks/contact';
+@import 'blocks/commitments';
+@import 'blocks/services';
+@import 'blocks/works';
+@import 'blocks/faq';
+@import 'blocks/reviews';
+@import 'blocks/footer';
+@import 'blocks/hamburger';
+@import 'blocks/form';
+@import 'blocks/modal';
+@import 'blocks/gallery';
+@import 'blocks/policy';
+@import 'blocks/media';

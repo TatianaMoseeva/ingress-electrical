@@ -1,0 +1,106 @@
+.services {
+    padding-top: 70px;
+    padding-bottom: 75px;
+    background: url('../img/services_bg.jpg') center (center/cover) no-repeat;
+    
+    &__tabs {
+        margin-top: 50px;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: auto;
+        grid-auto-rows: auto;
+        row-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    &__tab {
+        width: 220px;
+        height: 45px;
+        border: 2px solid $yellow_color;
+        border-radius: 5px;
+        transform: skewX(-25deg);
+        margin: 0 5px;
+        cursor: pointer;
+        font-size: 18px;
+        letter-spacing: -0.06em;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 48px; 
+        transition: 0.4s all;
+        &:hover {
+            box-shadow: 3px 3px 20px $yellow_color;
+            border: none;
+        }
+        
+        div {
+            transform: skewX(25deg);
+            color: $yellow_color;
+        }
+        &_active {
+            width: 220px;
+            height: 45px;
+            background-color: $yellow_color;
+            border: none;
+            div {
+                color: $dark_blue;
+            }
+        }
+    }
+    &__content {
+        width: 780px;
+        margin: 80px auto 0 auto;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: 110px;
+        grid-auto-rows: 110px;
+        gap: 20px;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    &__item{
+        position: relative;
+        padding: 20px;
+        width: 180px;
+        height: 110px;
+        background: #EEEDED; 
+        &:before {
+            content: url('../icons/services/plug 1.svg');
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: -5px;
+        }
+    }   
+    &__desc {
+        width: 135px;
+        font-size: 18px;
+        line-height: 22px;
+        position: absolute;
+        text-transform: capitalize;
+    }
+
+    &__footer {
+        margin: 75px auto 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 75px;
+        justify-content: center;
+    }
+    &__message {
+        width: 620px;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+}
+    
+
+    

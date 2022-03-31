@@ -1,0 +1,16 @@
+.title {
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $dark_blue;
+    font-family: 'Lato Bold';
+    &_contact {
+        margin-bottom: 15px;
+        width: 395px;
+        text-align: left;
+    }
+    &_services {
+        color: $yellow_color;
+    }
+}
