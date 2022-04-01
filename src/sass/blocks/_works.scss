@@ -52,6 +52,11 @@
         img {
             width: 100%;  
         }
+        cursor: zoom-in;
+        transition: 0.3s all;
+        &:hover {
+            opacity: 0.9;
+        }
     }
     &__desc {
         width: 280px;

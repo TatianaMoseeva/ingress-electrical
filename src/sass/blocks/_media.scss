@@ -1,3 +1,8 @@
+@media (max-width: 1439px) {
+    .gallery {
+        width: 450px;
+    }
+}
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
@@ -187,6 +192,17 @@
             font-size: 12px;
         }
     }
+    .policy {
+        h2 {
+            font-size: 20px;
+        }
+        h3 {
+            font-size: 14px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
     .services {
         &__tab {
             width: 160px;
@@ -300,6 +316,9 @@
             font-size: 12px;
         }
     }
+    .policy {
+        padding: 30px;
+    }
     .commitments {
         &__wrap {
             display: block;
@@ -351,6 +370,9 @@
             }
         }
     }
+    .gallery {
+        width: 400px;
+    }
     .faq {
         &__title {
             font-size: 16px;
@@ -387,7 +409,13 @@
             margin-top: 40px;
             grid-column: 1 / 2;
             grid-row: 3 / 4;
-        }  
+        }
+        &__copyright {
+            margin-top: 50px;
+            p {
+                font-size: 10px;
+            }
+        }
     }
     .modal {
         width: 540px;
@@ -500,6 +528,22 @@
             grid-row: 1 / 2;
         }
     }
+    .policy {
+        padding: 10px;
+        h2 {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        h3 {
+            font-size: 12px;
+        }
+        p {
+            font-size: 10px;
+        }
+        &__close {
+            right: 2%;
+        }
+    }
     .commitments {
         padding-top: 40px;
         padding-bottom: 60px;
@@ -555,6 +599,13 @@
             &_small {
                 right: 5px;
             }
+        }
+    }
+    .gallery {
+        width: 90%;
+        &__close {
+            top: 17px;
+            right: 17px;
         }
     }
     .faq {

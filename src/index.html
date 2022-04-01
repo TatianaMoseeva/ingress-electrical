@@ -91,9 +91,9 @@
                         <div class="contact__desc">We will carry out rigorous tests after we complete our works and provide the necessary documentation and warranty</div>
                     </div>
                 </div>
-                <div class="contact__quote">
+                <div class="contact__quote" id="contact">
                     <div class="contact__quote-top">
-                        <img src="icons/envelope.svg" alt="mail">
+                        <a href="#contact"><img src="icons/envelope.svg" alt="mail"></a>
                         <div class="contact__quote-top__message"><a href="tel:+61451111224">Call us</a> today or complete the form and write us a few words about your electrical project</div>
                     </div>
                     <div class="contact__quote-main">
@@ -114,7 +114,7 @@
                                 <button class="btn">Send a request</button>
                                 <div class="feed-form__policy">
                                     <input type="checkbox" required>
-                                    <span>I agree to the <a href="/policy.html" target="_blank">Terms and Privacy statement</a></span>
+                                    <span>I agree to the <div data-modal="policy">Terms and Privacy statement</div></span>
                                 </div>
                             </div>
                         </form>
@@ -286,14 +286,14 @@
             <div class="works__carousel">
                     <div class="works__items">
                         <div class="works__item">
-                            <img src="img/works/work1.jpg" alt="photo" class="works__photo">
+                            <img src="img/works/work1.jpg" alt="photo" class="works__photo" data-modal="gallery">
                             <div class="works__desc">
                                 <div class="works__desc-title">Description:</div>
                                 <div class="works__desc-text">Meter box upgrade and outdoor lights installation</div>
                             </div>
                         </div>
                         <div class="works__item">
-                            <img src="img/works/work2.jpg" alt="photo" class="works__photo">
+                            <img src="img/works/work2.jpg" alt="photo" class="works__photo" data-modal="gallery">
                             <div class="works__desc">
                                 <div class="works__desc-title">Description:</div>
                                 <div class="works__desc-text">Meter box upgrade and outdoor lights installation</div>
@@ -305,25 +305,22 @@
                                 <div class="works__desc-title">Description:</div>
                                 <div class="works__desc-text">Meter box upgrade and outdoor lights installation</div>
                             </div>
-                            
                         </div>
                         <div class="works__item">
-                            <img src="img/works/work1.jpg" alt="photo" class="works__photo">
+                            <img src="img/works/work1.jpg" alt="photo" class="works__photo" data-modal="gallery">
                             <div class="works__desc">
                                 <div class="works__desc-title">Description:</div>
                                 <div class="works__desc-text">Meter box upgrade and outdoor lights installation</div>
                             </div>
                         </div>
                         <div class="works__item">
-                            <img src="img/works/work2.jpg" alt="photo" class="works__photo">
+                            <img src="img/works/work2.jpg" alt="photo" class="works__photo" data-modal="gallery">
                             <div class="works__desc">
                                 <div class="works__desc-title">Description:</div>
                                 <div class="works__desc-text">Meter box upgrade and outdoor lights installation</div>
                             </div>
                         </div>
                     </div>
-                
-               
             </div>
         </div>
     </section>
@@ -564,10 +561,15 @@
                     
                 </nav>
             </div>
+        <div class="footer__copyright">
+            <p>&copy; 2022 Ingress Electrical Pty Ltd</p>
 
+            <p>ABN 22 626 534 076</p>
+        </div>
         </div>
     </footer>
-    <div class="overlay">
+
+    <div class="overlay-quote">
         <div class="modal">
             <div class="modal__close">&times;</div>
             <div class="contact__quote-top__message"><a href="tel:+61451111224">Call us</a> today or complete the form and write us a few words about your electrical project</div>
@@ -589,25 +591,126 @@
                     <button class="btn">Send a request</button>
                     <div class="feed-form__policy">
                         <input type="checkbox" required>
-                        <span>I agree to the <a href="/policy.html" target="_blank">Terms and Privacy statement</a></span>
+                        <span>I agree to the <div data-modal="policy">Terms and Privacy statement</div></span>
                     </div>
                 </div>
             </form>
         </div>
     </div> 
-
     <div class="overlay-gallery">
         <div class="gallery">
             <div class="gallery__close">&times;</div>
             <div class="gallery__photos">
-                <img src="img/works/ex_0.jpg" alt="photo" class="gallery__photo">
-                <img src="img/works/ex_1.jpg" alt="photo" class="gallery__photo">
-                <img src="img/works/ex_2.jpg" alt="photo" class="gallery__photo">
-                <img src="img/works/ex_3.jpg" alt="photo" class="gallery__photo">
+                <img src="img/works/gal_1/ex_0.jpg" alt="photo" class="gallery__photo">
+                <img src="img/works/gal_1/ex_1.jpg" alt="photo" class="gallery__photo">
+                <img src="img/works/gal_1/ex_2.jpg" alt="photo" class="gallery__photo">
+                <img src="img/works/gal_1/ex_3.jpg" alt="photo" class="gallery__photo">
             </div>
         </div>
     </div>
-    
+    <div class="overlay-gallery">
+        <div class="gallery">
+            <div class="gallery__close">&times;</div>
+            <div class="gallery__photos">
+                <img src="img/works/gal_2/ex_1.jpg" alt="photo" class="gallery__photo">
+                <img src="img/works/gal_2/ex_2.jpg" alt="photo" class="gallery__photo">
+                <img src="img/works/gal_2/ex_3.jpg" alt="photo" class="gallery__photo">
+                <img src="img/works/gal_2/ex_4.jpg" alt="photo" class="gallery__photo">
+            </div>
+        </div>
+    </div>
+    <div class="overlay-gallery">
+        <div class="gallery">
+            <div class="gallery__close">&times;</div>
+            <div class="gallery__photos">
+                <img src="img/works/gal_2/ex_1.jpg" alt="photo" class="gallery__photo">
+                <img src="img/works/gal_2/ex_2.jpg" alt="photo" class="gallery__photo">
+                <img src="img/works/gal_2/ex_3.jpg" alt="photo" class="gallery__photo">
+            </div>
+        </div>
+    </div>
+    <div class="overlay-gallery">
+        <div class="gallery">
+            <div class="gallery__close">&times;</div>
+            <div class="gallery__photos">
+                <img src="img/works/gal_2/ex_1.jpg" alt="photo" class="gallery__photo">
+                <img src="img/works/gal_2/ex_2.jpg" alt="photo" class="gallery__photo">
+                <img src="img/works/gal_2/ex_3.jpg" alt="photo" class="gallery__photo">
+            </div>
+        </div>
+    </div>
+    <div class="overlay-gallery">
+        <div class="gallery">
+            <div class="gallery__close">&times;</div>
+            <div class="gallery__photos">
+                <img src="img/works/gal_2/ex_1.jpg" alt="photo" class="gallery__photo">
+                <img src="img/works/gal_2/ex_2.jpg" alt="photo" class="gallery__photo">
+                <img src="img/works/gal_2/ex_3.jpg" alt="photo" class="gallery__photo">
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay-policy">
+        <div class="policy">
+            <div class="policy__close" data-modal="close">&times;</div>
+            <div class="policy__content">
+                <h2 class="title">Acceptable use policy</h2>
+                <h3>About this policy</h3>
+                <p>Ingress Electrical Pty Ltd (‘Ingress Electrical’, ‘we’ or ‘us’) is an Australian owned company that owns the website located on the web address www.ingresselectrical.com.au (‘website’). This policy provides the legal terms and conditions that apply to users of the website. Please read this Acceptable use policy carefully before you start using the website. Please, note our Privacy policy and Copyright policy are also applied to users of our website.
+                    This policy is governed by and constructed in accordance with the law of New South Wales, Australia.
+                    </p>
+                <h3>Use of the website</h3>
+                <p>You may use the website and its content for its intended purposes and in accordance with this policy. You are authorised to view the Ingress Electrical website and its content. You may not reproduce, distribute, publish, display, and download any of the content of the website without the prior written permission of Ingress Electrical. You may not use the website to take any action that harms us or anyone else. You may not use the website in a manner that breaches any laws, standards or codes.</p>
+                <h3>Termination of access</h3>
+                <p>We may terminate your access to the website and its content if you breach this policy at any time.</p>
+                <h3>Contact details</h3>
+                <p>Please direct any questions or complaints related to the website to @.com.au.</p>
+                <h2 class="title">Privacy policy</h2>
+                <h3>About this policy</h3>
+                <p>This privacy policy describes our policies and procedures on the collection, store and use of your information when you use the website located on the web address www.ingresselectrical.com.au (‘website’) which owned by Ingress Electrical Pty Ltd (‘Ingress Electrical’, ‘we’ or ‘us’).</p>
+                <p>This policy is governed by the Australian Privacy Act and bounded by the Australian Privacy Principals. </p>
+                <p>This policy came into effect on 21 June 2021. We may update this policy over time and publish the updated version on this webpage.</p>
+                <h3>Collection of personal information</h3>
+                <p>To carry out our business activities we may collect, store and use your personal information. You are the main source of personal information we collect. Generally, we collect two types of information:</p>
+                <p>1. Your name and email address you provide when sending us a question form including any information you include in your message.</p>
+                <p>2. Information about how you use our website that we collect using cookies and web analytics tools. We refer to this automatically-collected information as “Device Information”.</p>
+                
+                <h3>Device information we collect</h3>
+                <p>When you visit the website, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device that generally do not contain personal identifiable information. Additionally, as you browse the website, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the website, and information about how you interact with the website. </p>
+                <p>We use the Device Information that we collect to help us screen for potential risk and fraud, and more generally to improve and optimise our website.</p>
+                <h3>Collection of sensitive information</h3>
+                <p>We do not request any sensitive information from you unless you provide it by your own choice. In this scenario, we may consider this information as unsolicited personal information and take all reasonable steps to eliminate it. We do not request and collect any government identifiers for any purposes.</p>
+                <h3>Anonymity</h3>
+                <p>When it is possible we allow you to keep your anonymity and not to provide your personal information by using a pseudonym. For example, when sending a complaint using our contact form you do not need to provide your real name. However, if you expect any further feedback from us you are required to provide a real phone number and, for example, your customer order number.</p>
+                <h3>Disclosure</h3>
+                <p>We may disclose your personal information to third parties, including our suppliers and contractors. To protect your personal information we require the third party to comply with the current privacy law and regulations. We may also share your information with your authorised representatives and other parties when you ask us to do so. Ingress Electical will not directly or indirectly sell or pass your information to unrelated marketing companies.</p>
+                <h3>Direct marketing</h3>
+                <p>We perform direct marketing mailing for the purpose to notify our customers about our products. When the customers no longer want to receive our marketing information they are able to unsubscribe by using the link located in each email or request to opt-out by contacting us. </p>
+                <h3>Quality of information</h3>
+                <p>We maintain the accuracy of personal information by ensuring the consistency of recording, updating and deleting the data.</p>
+                <h3>Security</h3>
+                <p>All personal information is stored on our cloud storage or servers located in Australia. We have limited access to this data with strict authorization. To ensure the security of information we use contemporary software and hardware and conduct a regular check-up of our security measures.</p>
+                <h3>Customer access to their information</h3>
+                <p>If you wish to update your personal information that we held, please, contact us via email @.com.au.</p>
+                <h3>Contact us</h3>
+                <p>If you have questions related to this privacy policy you can contact us via email @.com.au.</p>
+                <h2 class="title">Copyright Policy</h2>
+                <h3>About this policy</h3>
+                <p>This policy outline how Ingress Electrical Pty Ltd (‘Ingress Electrical’, ‘we’ or ‘us’) comply with the Australian Copyright Act 1968 and applies to the website located on the web address www.ingresselectrical.com.au (‘website’).</p>
+                <h3>Content</h3>
+                <p>All content of the website, including but not limited to text and images, is owned by Ingress Electrical and protected by Australian copyright law or any other country.</p>
+                <h3>Use of content</h3>
+                <p>You are authorised to view the Ingress Electrical website and its content. You may not reproduce, distribute, publish, display, and download any of the content of the website without the prior written permission of Ingress Electrical. Except for any other use permitted by the Copyright Act 1968 all other rights on the content of the website are reserved.</p>
+                <h3>Link to the website</h3>
+                <p>You may post a link to the website on your site if that site doesn’t contain any illegal materials including the materials that infringe the copyright. You may not alter our content and frame any page of the website.</p>
+                <h3>Contact us</h3>
+                <p>Queries related to the copyright should be addressed to @.com.au.</p>
+                <button class="btn btn_close" data-modal="close">Close</button>
+            </div>
+
+        </div>
+    </div>
+
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

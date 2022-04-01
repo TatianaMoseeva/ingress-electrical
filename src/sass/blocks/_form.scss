@@ -65,8 +65,10 @@
             height: 15px;
             margin-bottom: 0;
         }
-        a {
+        div {
             color: $grey_color;
+            text-decoration: underline;
+            cursor: pointer;
         }
     }
 }

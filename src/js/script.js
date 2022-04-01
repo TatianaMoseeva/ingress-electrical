@@ -103,6 +103,44 @@ tabsParent.addEventListener('click', (event) => {
   }
 });
 
+/*GALLERY*/
+function showGallery(item) {
+  $(item).each(function(i) {
+      $(this).on('click', function(e) {
+          e.preventDefault();
+          $('.overlay-gallery').eq(i).addClass('overlay-gallery_active');
+          document.body.style.overflow = 'hidden';
+          $('.gallery__photos').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            adaptiveHeight: true,
+            fade: true,
+            cssEase: 'linear',
+            dots: true,
+            prevArrow: '<button type="button" class="slick-prev"><img src="../icons/services/left.svg" alt="left"></img></button>',
+            nextArrow:  '<button type="button" class="slick-next"><img src="icons/services/right.svg" alt="right"></button>',
+            speed: 400
+        }); 
+      });
+  });
+}
+showGallery('[data-modal=gallery]');
+
+function closeGallery(item) {
+  $(item).each(function(i) {
+      $(this).on('click', function(e) {
+          e.preventDefault();
+          $('.overlay-gallery').eq(i).removeClass('overlay-gallery_active');
+          document.body.style.overflow = '';
+          $('.gallery__photos').slick('unslick'); 
+      });
+  });
+}
+closeGallery('.gallery__close');
+
+
+
 /*REVIEWS*/
 $(document).ready(function(){
     $(".reviews__item").slice(0, 2).show();
@@ -118,7 +156,7 @@ $(document).ready(function(){
 
 /*MODAL QUOTE*/
 const quoteBtns = document.querySelectorAll('[data-modal=quote]'),
-      overlay = document.querySelector('.overlay'),
+      overlay = document.querySelector('.overlay-quote'),
       closeBtns = document.querySelectorAll('.modal__close');
 
   function closeModal() {
@@ -139,41 +177,30 @@ quoteBtns.forEach(btn =>
   btn.addEventListener('click', showModal)
 );
 
-/*GALLERY*/
-const sliderItems = document.querySelectorAll('[data-modal=gallery]'),
-      overlayGal = document.querySelector('.overlay-gallery'),
-      closeSlider = document.querySelectorAll('.gallery__close');
+/*MODAL POLICY*/
+const policyBtns = document.querySelectorAll('[data-modal=policy]'),
+      policy = document.querySelector('.overlay-policy'),
+      closeCrosses = document.querySelectorAll('[data-modal=close]');
 
-  function showGallery(e) {
+  function closePolicy() {
+    policy.style.display="none";
+    document.body.style.overflow = '';
+  }
+  function showPolicy(e) {
     e.preventDefault();
     document.body.style.overflow = 'hidden';
-    overlayGal.style.display="block";
-    $('.gallery__photos').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      dots: true,
-      prevArrow: '<button type="button" class="slick-prev"><img src="../icons/services/left.svg" alt="left"></img></button>',
-      nextArrow:  '<button type="button" class="slick-next"><img src="icons/services/right.svg" alt="right"></button>',
-      speed: 1200
-  });
+    policy.style.display="block";
   }
-  function closeGallery() {
-    overlayGal.style.display="none";
-    document.body.style.overflow = '';
-    $('.gallery__photos').slick('unslick');
-  }
-  sliderItems.forEach(btn =>
-    btn.addEventListener('click', showGallery)
+
+closeCrosses.forEach(btn =>
+  btn.addEventListener('click', closePolicy)
   );
 
-  closeSlider.forEach(btn =>
-    btn.addEventListener('click', closeGallery)
-    );
-
+policyBtns.forEach(btn =>
+  btn.addEventListener('click', showPolicy)
+);
 
 /*MENU*/
-
 const menu = document.querySelector('.promo__list'),
       menuItem = document.querySelectorAll('.promo__link'),
       hamburger = document.querySelector('.hamburger');

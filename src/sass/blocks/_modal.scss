@@ -1,4 +1,4 @@
-.overlay {
+.overlay-quote {
     display: none;
     position: fixed;
     width: 100%;
@@ -17,10 +17,8 @@
     transform: translate(-50%, -50%);
     background-color: #ffffff;
     border-radius: 5px;
-    
-    
-
-
+    animation: fadeIn;
+    animation-duration: .3s;
     &__close {
         position: absolute;
         top: 10px;
@@ -29,6 +27,9 @@
         font-size: 41px;
         line-height: 21px;
         cursor: pointer;
-        
+        transition: all 0.3s;
+        &:hover {
+            color: $dark_blue;
+        }
     }
 }
