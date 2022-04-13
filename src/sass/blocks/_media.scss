@@ -20,17 +20,23 @@
             margin-left: 70px;
         }
         &__link {
-            font-size: 16px;
+            font-size: 14px;
             line-height: 16px;
         }
         &__title {
-            font-size: 52px;
+            width: 640px;
+            font-size: 48px;
+            letter-spacing: 3px;
+        }
+        &__blocks {
+            width: 370px;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
         }
         &__block{
-            width: 110px;
             height: 90px;
         }
         &__desc {
+            margin-top: 15px;
             font-size: 14px;
             line-height: 18px;
         }
@@ -61,10 +67,8 @@
                 width: 420px;
             }
         }
-    }
-    .commitments {
-        &__desc {
-            font-size: 14px;
+        &__triggers {
+            column-gap: 40px;
         }
     }
     .services {
@@ -74,26 +78,15 @@
             line-height: 25px;
         }
     }
-    .works {
-        &__items {
-            width: 900px;
-        }
-    }
     .reviews {
-        &__desc {
-            font-size: 13px;
-        }
         &__name {
-            font-size: 16px;
+            font-size: 14px;
         }
     }
     .footer {
-        &__title {
-            font-size: 18px;
-        }
-        &__link {
-            font-size: 17px;
-            line-height: 24px;
+        padding-top: 20px;
+        &__grid {
+            column-gap: 140px;
         }
         &__locations {
             font-size: 14px;
@@ -130,10 +123,26 @@
             width: 100%;
         }
     }
+    .btn {
+        &_promo {
+            display: none;
+        }
+    }
     .promo {
         padding-top: 0;
         &__topheader {
             display: block;
+        }
+        &__topbar {
+            position: relative;
+            .btn_top {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 35px;
+                text-transform: capitalize;
+            }
         }
         &__list {
             position: fixed;
@@ -144,8 +153,8 @@
             width: 50%;
             height: 100vh;
             padding: 20px 15px;
-            background-color: rgba(0,0, 0, .8);
-            z-index: 10;
+            background-color: rgba(0,0, 0, .9);
+            z-index: 3;
             transition: .6s all;
             &_active {
                 left: 0;
@@ -160,31 +169,13 @@
         }
         &__title {
             margin-top: 60px;
-            width: 500px;
+            width: 610px;
             font-size: 45px;
             line-height: 58px;
         }
     }
     .contact {
-        padding-bottom: 40px;
-        &__wrap {
-            grid-template-columns: auto;
-            justify-items: center;
-        }
-        &__steps {
-            padding-left: 70px;
-            margin-bottom: 60px;
-        }
-        &__title {
-            font-size: 16px;
-        }
-        &__quote {
-            position: static;
-            &-top {
-                background: transparent;
-                background-color: #fff;
-            }
-        }
+        display: none;
     }
     .feed-form {
         label {
@@ -205,30 +196,19 @@
     }
     .services {
         &__tab {
-            width: 160px;
-            &_active {
-                width: 160px;
-            }
+            font-size: 17px;
         }
         &__content {
-            width: 700px;
-        }
-        &__items {
-            grid-template-rows: 80px;
-            grid-auto-rows: 80px;
+            margin-top: 60px;
         }
         &__item {
-            width: 150px;
-            height: 80px;
+            height: 70px;
         }
         &__desc {
-            width: 100px;
-            font-size: 14px;
-            line-height: 19px;
+            font-size: 16px;
+            line-height: 20px;
+            width: 85%;
             top: 10px;
-        }
-        &__footer {
-            margin-top: 45px;
         }
         &__message {
             width: 320px;
@@ -242,15 +222,9 @@
         }
         .slick-prev {
             left: 25%;
-            &_small {
-                left: 5px;
-            }
         }
         .slick-next {   
             right: 25%;
-            &_small {
-                right: 5px;
-            }
         }
     }
     .faq {
@@ -259,33 +233,19 @@
             grid-template-columns: auto;
             justify-content: center;
         }
+        &__title {
+            font-size: 16px;
+        }
         
     }
-    .reviews {
-        &__body {
-            font-size: 14px;
-        }
-    }
     .footer {
-        padding-top: 40px;
         &__grid {
-            margin-left: 30px;
             grid-template-columns: 250px auto;
             grid-template-rows: repeat(6,auto);
             row-gap: 20px;
             column-gap: 180px;
         }
-        &__title {
-            grid-column: 1 / 2;
-            margin-left: 20px;
-            margin-right: 60px;
-            font-size: 16px;
-            line-height: 23px;
-            margin: 0;
-            text-align: left;
-        }
         &__locations {
-            margin-top: 50px;
             grid-column: 2/ 3;
             grid-row: 1 / 4;
             text-align: left;
@@ -293,10 +253,6 @@
         &__contacts {
             margin-top: 30px;
             grid-column: 1 / 2;
-            
-        }
-        &__nav {
-            display: none;
         }
     }
 }
@@ -306,9 +262,11 @@
         max-width: 540px;
     }
     .promo {
-        
         &__title {
             margin-top: 40px;
+            width: 500px;
+            font-size: 40px;
+            letter-spacing: 1px;
         }
     }
     .feed-form {
@@ -334,15 +292,14 @@
         }
     }
     .services {
+        &__tabs {
+            margin-top: 50px;
+        }
         &__tab {
-            width: 120px;
-            font-size: 14px;
-            &_active {
-                width: 120px;
-            }
+            font-size: 15px;
         }
         &__content {
-            width: 480px;
+            margin-top: 50px;
         }
         &__items {
             grid-template-columns: repeat(3, auto);
@@ -359,26 +316,18 @@
     .works  {
         .slick-prev {
             left: 20%;
-            &_small {
-                left: 5px;
-            }
         }
         .slick-next {   
             right: 20%;
-            &_small {
-                right: 5px;
-            }
         }
     }
     .gallery {
         width: 400px;
     }
-    .faq {
-        &__title {
-            font-size: 16px;
-        }
-    }
     .reviews {
+        &__item {
+            margin: 50px 50px 0 50px;
+        }
         &__stars {
             column-gap: 4px;
             grid-template-columns: repeat(5, 12px);
@@ -387,34 +336,35 @@
             }
         }
         &__body {
+            font-size: 13px;
             line-height: 23px;
+        }
+        &__name {
+            margin-top: 15px;
+        }
+    }
+    .btn {
+        &_reviews {
+            margin: 60px 50px 0 auto;
         }
     }
     .footer {
         &__grid {
-            margin-left: 0;
-            grid-template-columns: 300px;
+            margin-top: 40px;
+            grid-template-columns: 250px;
             row-gap: 20px;
             justify-content: center;
         }
-        &__title {
-            grid-column: 1 / 2;
-            margin: 0;
-        }
+
         &__locations {
             grid-column: 1 / 2;
             grid-row: unset;
         }
         &__contacts {
             margin-top: 40px;
-            grid-column: 1 / 2;
-            grid-row: 3 / 4;
         }
         &__copyright {
             margin-top: 50px;
-            p {
-                font-size: 10px;
-            }
         }
     }
     .modal {
@@ -436,74 +386,31 @@
         font-size: 14px;
         line-height: 16px;
         &_reviews {
-            margin: 20px auto 70px auto;
-            width: 280px;
+            margin: 20px auto 0 auto;
         }
     }
     .promo {
-        &__topbar {
-            height: 40px;
-        }
-        &__logo {
-            width: 38px;
-        }
-        &__name {
-            font-size: 16px;
-            line-height: 19px;
-        }
         &__list {
             width: 85%;
         }
         &__title {
             width: 90%;
-            margin-top: 100px;
+            margin-top: 60px;
             font-size: 35px;
             line-height: 45px;
         }
         &__blocks {
+            width: 100%;
             margin-top: 100px;
         }
         &__block {
-            width: 85px;
             height: 85px;
         }
         &__desc {
-            font-size: 12px;
-            line-height: 14px;
+            margin-top: 10px;
         }
     }
-    .contact {
-        &__steps {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        &__step {
-            grid-template-columns: 25px auto;
-            column-gap: 17px;
-        }
-        &__round {
-            width: 25px;
-            height: 25px;
-            font-size: 16px;
-            line-height: 16px;
-        }
-        &__title {
-            font-size: 14px;
-            line-height: 16px;
-        }
-        &__desc {
-            font-size: 12px;
-            line-height: 16px;
-        }
-        &__quote {
-            &-top {
-                height: 90px;
-                padding: 0 10px;
-                grid-template-columns: 25px auto;
-                column-gap: 17px;
-            }
-        }
-    }
+    
     .feed-form {
         width: 80%;
         margin-top: 30px;
@@ -522,10 +429,9 @@
         }
         &__triggers {
             grid-column: unset;
-
-        }
-        &__policy {
-            grid-row: 1 / 2;
+            grid-template-columns: auto;
+            grid-template-rows: repeat(2, auto);
+            row-gap: 20px;
         }
     }
     .policy {
@@ -559,25 +465,16 @@
     }
     .services {
         &__tabs {
-            grid-template-columns: repeat(2, auto);
+            grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+            row-gap: 10px;
         }
-        &__tab {
-            width: 120px;
-            font-size: 14px;
-            &_active {
-                width: 120px;
-            }
-        }
-        &__content {
-            margin-top: 40px;
-            width: 300px;
-        }
+
         &__items {
             grid-template-columns: repeat(2, auto);
             gap: 15px;
         }
-        &__item {  
-            width: 130px;
+        &__desc {
+            width: 70%;
         }
         &__message {
             width: 250px;
@@ -590,22 +487,36 @@
         }
         .slick-prev {
             left: 0;
-            &_small {
-                left: 5px;
-            }
+            height: 35px;
         }
         .slick-next {   
             right: 0;
-            &_small {
-                right: 5px;
-            }
+            height: 35px;
         }
     }
     .gallery {
-        width: 90%;
+        width: 95%;
+        padding: 5px;
         &__close {
             top: 17px;
             right: 17px;
+        }
+        .slick-prev, .slick-next {
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        &__photos  {
+            .slick-dots {
+                li {
+                    margin: 0 5px;
+                }
+                button {
+                    width: 7px;
+                    height: 7px;
+                }
+            }
         }
     }
     .faq {
@@ -613,10 +524,16 @@
         padding-bottom: 50px;
         &__grid {
             margin-top: 10px;
-            /* grid-template-columns: 275px; */
+        }
+        &__item {
+            margin-top: 20px;
+        }
+        &__plus {
+            margin-right: 15px;
         }
         &__title {
             font-size: 14px;
+            line-height: 18px;
         }
         &__answer {
             font-size: 13px;
@@ -624,6 +541,7 @@
     }
     .reviews  {
         padding-top: 40px;
+        padding-bottom: 70px;
         &__item {
             margin: 30px 10px 0 10px;
             padding: 30px 20px;
@@ -633,29 +551,9 @@
             font-size: 10px;
             line-height: 12px;
         }
-        &__body {
-            font-size: 13px;
-            line-height: 21px;
-            &:before {
-                content: url('../icons/reviews/quote 1.svg');
-                top: -35px;
-            }
-        }
-        &__name {
-            margin-top: 20px;
-            font-size: 14px;
-            line-height: 16px;
-        }
         &__suburb {
-            margin-top: 5px;
             font-size: 13px;
             line-height: 15px;
-        }
-    }
-    .footer {
-        &__grid {
-            margin: 0 20px 0 20px;
-            grid-template-columns: auto;
         }
     }
     .modal {

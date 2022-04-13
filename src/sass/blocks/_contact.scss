@@ -1,5 +1,4 @@
 .contact {
-    
     padding-top: 50px;
     padding-bottom: 90px;
     background-color: #F4F4F4;
@@ -25,27 +24,24 @@
         height: 45px;
         border-radius: 100%;
         background-color: $yellow_color;
-        border: none;
+        border: 1px solid $yellow_color;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 24px;
         line-height: 28px;
- 
     }
     &__title {
         grid-column: 2 / 3;
         font-weight: bold;
         font-size: 18px;
         line-height: 21px;
-
     }
     &__desc {
         grid-column: 2 / 3;
         margin-top: 10px;
         font-size: 14px;
         line-height: 21px;
-
     }
     &__quote {
         position: absolute;
@@ -59,7 +55,7 @@
             align-items: center;
             grid-template-columns: 40px auto;
             column-gap: 25px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, .8);
             border-radius: 5px 5px 0 0;
             img {
                 width: 100%;
@@ -71,7 +67,7 @@
             }
         }
         &-main {
-            padding-bottom: 60px;
+            padding-bottom: 50px;
             background-color: #fff;
             box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.06);
             border-radius: 0px 0px 10px 10px;

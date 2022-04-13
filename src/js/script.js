@@ -5,8 +5,8 @@ $(document).ready(function(){
         slidesToShow: 3,
         slidesToScroll: 3,
         speed: 1200,
-        prevArrow: '<button type="button" class="slick-prev"><div class="arrow_wrap"><img src="../icons/works/left_arrow.svg" alt="previous"></img>Previous</div></button>',
-        nextArrow:  '<button type="button" class="slick-next"><div class="arrow_wrap">Next<img src="../icons/works/right_arrow.svg" alt="next"></img></div></button>',
+        prevArrow: '<button type="button" class="slick-prev"><div class="arrow_wrap"><img src="icons/works/left_arrow.svg" alt="previous"></img>Previous</div></button>',
+        nextArrow:  '<button type="button" class="slick-next"><div class="arrow_wrap">Next<img src="icons/works/right_arrow.svg" alt="next"></img></div></button>',
         responsive: [
           {
             breakpoint: 991,
@@ -17,7 +17,7 @@ $(document).ready(function(){
             }
           },
           {
-            breakpoint: 767,
+            breakpoint: 575,
             settings: {
               infinite: true,
               slidesToShow: 1,
@@ -29,9 +29,10 @@ $(document).ready(function(){
     $('.commitments__wrap').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
+      infinite: true,
       autoplay: true,
-      prevArrow: '<button type="button" class="slick-prev"><img src="../icons/services/left.svg" alt="left"></img></button>',
-      nextArrow:  '<button type="button" class="slick-next"><img src="icons/services/right.svg" alt="right"></button>',
+      prevArrow: '<button type="button" class="slick-prev"><img src="icons/services/left.svg" alt="left"></button>',
+      nextArrow: '<button type="button" class="slick-next"><img src="icons/services/right.svg" alt="right"></button>',
       autoplaySpeed: 3000,
       responsive: [
         {
@@ -118,7 +119,7 @@ function showGallery(item) {
             fade: true,
             cssEase: 'linear',
             dots: true,
-            prevArrow: '<button type="button" class="slick-prev"><img src="../icons/services/left.svg" alt="left"></img></button>',
+            prevArrow: '<button type="button" class="slick-prev"><img src="icons/services/left.svg" alt="left"></button>',
             nextArrow:  '<button type="button" class="slick-next"><img src="icons/services/right.svg" alt="right"></button>',
             speed: 400
         }); 

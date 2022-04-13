@@ -1,54 +1,18 @@
 .works {
     padding-top: 80px;
-    padding-bottom: 130px;
+    padding-bottom: 180px;
     
     &__carousel {
         margin-top: 70px;
-        
     }
     &__items {
-        width: 950px;
         margin: 0 auto;
         position: relative;
-    }
-    &__photos {
-        width: 280px;
-        height: 240px;
-        margin: 0 auto;
-        position: relative;
-        
-        .slick-dots {
-            display: flex;
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            align-items: center;
-            justify-content: center;
-            li {
-                list-style-type: none;
-                margin: 0 7px;
-            }
-            button {
-                font-size: 0;
-                width: 10px;
-                height: 10px;
-                background-color: #fff;
-                border-radius: 100%;
-                border: none;
-                cursor: pointer;
-            }
-            .slick-active {
-                button {
-                    background-color: $yellow_color;
-                }
-            }      
-        }
     }
     &__photo {
-        width: 280px;
-        height: 240px;
+        width: 100%;
         margin: 0 auto;
+        border: 1px solid #fff;
         img {
             width: 100%;  
         }
@@ -59,28 +23,26 @@
         }
     }
     &__desc {
-        width: 280px;
+        width: 55%;
         margin: 0 auto;
+        margin-top: 15px;
         font-size: 14px;
         line-height: 21px;
-        &-title {
-            margin-top: 24px;
-            font-weight: 600;
-        }
-        &-text {
-            margin-top: 8px;
-            width: 224px;
-        }
+        text-align: center;
+    }
+    .slick-slide { 
+        margin: 0 10px;
+        
     }
     .slick-prev, .slick-next {
         background-color: transparent;
-        border: none;
+        border: 1px solid $yellow_color;
         position: absolute;
         z-index: 2;
-        bottom: -25%;
+        bottom: -30%;
         cursor: pointer;
         width: 120px;
-        height: 30px;
+        height: 45px;
         background: $yellow_color;
         border-radius: 5px;
         img {
@@ -88,21 +50,6 @@
         }
         &:hover {
             background: #FFF25E;
-        }
-        &_small {
-            width: 30px;
-            background-color: transparent;
-            border: none;
-            position: absolute;
-            top: 45%;
-            cursor: pointer;
-            img {
-                width: 30px;
-                height: 30px;
-            }
-            &:hover {
-                background: transparent;
-            }
         }
     }
     .slick-prev {
@@ -122,8 +69,8 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        font-size: 14px;
-        line-height: 35px;
+        font-size: 16px;
+        line-height: 30px;
         text-transform: uppercase;
-        
+        color: #fff;
 }

@@ -1,26 +1,32 @@
 .footer {
     padding-top: 50px;
     padding-bottom: 40px;
-    background-color: $dark_blue;
-    
+    background-color: $dark_blue;   
     &__grid {
+        margin-top: 50px;
         display: grid;
-        grid-template-columns: 300px auto 280px;
-        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(3, auto);
+        column-gap: 200px;
+        align-items: start;
     }
-
-    &__title {
-        margin: 60px 80px 0 80px;
-        font-size: 20px;
+    &__logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    &__name {
+        width: 92px;
+        font-weight: 700;
+        font-size: 24px;
         line-height: 28px;
-        color: #FFFFFF;
-        text-align: center;
+        color: #fff;
     }
-
     &__contacts {
+        margin-top: 30px;
         display: grid;
-        grid-template-columns: 76px auto;
+        grid-template-columns: auto auto;
         grid-template-rows: repeat(4, auto);
+        gap: 20px;
         
         span {
             font-weight: bold;
@@ -52,38 +58,17 @@
     }
     
     &__locations {
-        margin-top: 60px;
+        margin-top: 30px;
         font-size: 16px;
         line-height: 21px;
         text-align: right;
         color: #FFFFFF;
-        grid-column: 3 / 4;
-        grid-row: 1 / 3;
         ul {
             margin-top: 20px;
             list-style-type: none;
         }
         li {
             color:#FFFFFF;
-        }
-    }
-    &__list {
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-    }
-    &__link {
-        margin-bottom: 20px;
-        font-size: 20px;
-        line-height: 28px;
-        text-align: center;
-        text-transform: uppercase;
-        a {
-            color: #FFFFFF;
-            text-decoration: none;
-            &:hover {
-                color: $yellow_color;
-            }
         }
     }
     &__copyright {

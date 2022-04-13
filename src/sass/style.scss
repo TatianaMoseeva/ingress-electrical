@@ -2,6 +2,8 @@
 @import 'libs/slick';
 @import 'base/variables';
 
+
+
 * {
     font-family: 'Lato Regular', sans-serif;
     margin: 0;
@@ -10,6 +12,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 
 .container {
     width: 1140px;
@@ -40,4 +43,7 @@ h2 {
 @import 'blocks/gallery';
 @import 'blocks/policy';
 @import 'libs/animate';
+
+
 @import 'blocks/media';
+@import 'base/dark';

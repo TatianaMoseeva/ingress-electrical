@@ -1,55 +1,62 @@
 .reviews {
     padding-top: 80px;
+    padding-bottom: 100px;
     &__wrapper {
         margin-bottom: 60px;
     }
     &__item {
-        margin: 50px 50px 0 50px;
-        padding: 40px 70px;
+        position: relative;
+        margin: 50px 90px 0 90px;
+        padding: 25px 40px;
         background: #FFFFFF;
         box-shadow: 0px 16px 53px rgba(0, 0, 0, 0.06);
         display: none;
+/*         svg path {
+            fill: $dark_blue;
+        } */
+        &:before {
+            content: url("data:image/svg+xml;charset=UTF-8,<svg width='75' height='65' viewBox='0 0 85 75' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <path d='M50.6443 59.5024C48.5273 60.3854 47.6395 62.8986 48.5956 64.9364L51.9418 71.9326C52.8979 73.9017 55.2197 74.7854 57.2684 73.9017C63.0731 71.4564 68.0582 68.264 72.0191 64.3923C76.8677 59.842 80.1456 54.6118 81.9211 48.8382C83.6967 42.996 84.6527 35.0495 84.6527 24.9288V4.07592C84.6527 1.8344 82.8089 0.000442505 80.5553 0.000442505H53.7174C51.4638 0.000442505 49.62 1.8344 49.62 4.07592V30.7703C49.62 33.0125 51.4638 34.8458 53.7174 34.8458L66.5559 34.8458C66.4193 41.7068 64.7803 47.208 61.7756 51.3521C59.3171 54.6791 55.6295 57.3961 50.6443 59.5024Z' fill='%23F5F5F5'/>
+            <path d='M2.43164 59.5028C0.314655 60.3858 -0.572433 62.899 0.382942 64.9367L3.72915 71.8644C4.68521 73.8342 7.00707 74.7172 9.05577 73.8342C14.7921 71.3889 19.7097 68.1964 23.7381 64.3926C28.5874 59.7738 31.9329 54.5436 33.7091 48.77C35.4847 43.065 36.3718 35.1171 36.3718 24.9285V4.0756C36.3718 1.83408 34.5279 0.00012207 32.2744 0.00012207H5.4364C3.18283 0.00012207 1.339 1.83408 1.339 4.0756V30.77C1.339 33.0122 3.18283 34.8454 5.4364 34.8454L18.3432 34.8454C18.2066 41.7065 16.567 47.2077 13.5629 51.3518C11.1045 54.6794 7.41681 57.3964 2.43164 59.5028Z' fill='%23F5F5F5'/>
+            </svg>");
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            
+        }
     }
     
     &__stars {
         display: grid;
-        grid-template-columns: repeat(5, 18px);
+        grid-template-columns: repeat(5, 15px);
         grid-template-rows: 18px;
         column-gap: 5px;
         justify-content: end;
         img {
-            width: 18px;
+            width: 15px;
         }
     }
     &__desc {
         margin-top: 10px;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 16px;
         text-align: right;
     }
     &__body {
         position: relative;
         margin-top: 30px;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 30px;
-        z-index: 2;
-        &:before {
-            content: url('../icons/reviews/quote.svg');
-            display: block;
-            position: absolute;
-            top: -58px;
-            left: 0;
-            z-index: -1;
-        }
+        
     }
     &__name {
         margin-top: 30px;
         font-weight: 700;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 21px;
     }
     &__suburb{
-        margin-top: 10px;
         font-size: 14px;
         line-height: 16px;
     }

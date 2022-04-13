@@ -4,83 +4,70 @@
     background: url('../img/services_bg.jpg') center (center/cover) no-repeat;
     
     &__tabs {
-        margin-top: 50px;
-        list-style-type: none;
         display: grid;
         grid-template-columns: repeat(4, auto);
         grid-template-rows: auto;
-        grid-auto-rows: auto;
-        row-gap: 10px;
-        justify-content: center;
-        align-items: center;
+        margin-top: 70px;
+        list-style-type: none;
         margin-bottom: 0;
         padding-left: 0;
+        justify-content: center;
+        column-gap: 10px;
     }
     &__tab {
-        width: 220px;
-        height: 45px;
-        border: 2px solid $yellow_color;
-        border-radius: 5px;
-        transform: skewX(-25deg);
-        margin: 0 5px;
+        width: 100%;
+        padding: 0 10px;
         cursor: pointer;
         font-size: 18px;
-        letter-spacing: -0.06em;
+        height: 45px;
+        border: 1px solid $yellow_color;
         text-transform: uppercase;
         text-align: center;
-        line-height: 48px; 
+        line-height: 45px; 
         transition: 0.4s all;
+        border-right: 3px solid $yellow_color;
+        border-bottom: 2px solid $yellow_color;
         &:hover {
             box-shadow: 3px 3px 20px $yellow_color;
             border: none;
         }
-        
         div {
-            transform: skewX(25deg);
             color: $yellow_color;
         }
         &_active {
-            width: 220px;
-            height: 45px;
             background-color: $yellow_color;
-            border: none;
+            border-right: 3px solid #918b46;
+            border-bottom: 2px solid #918b46;
             div {
                 color: $dark_blue;
             }
         }
     }
     &__content {
-        width: 780px;
         margin: 80px auto 0 auto;
     }
     &__items {
         display: grid;
         grid-template-columns: repeat(4, auto);
-        grid-template-rows: 110px;
-        grid-auto-rows: 110px;
+        grid-template-rows: auto;
+        grid-auto-rows: auto;
         gap: 20px;
-        justify-content: center;
         justify-items: center;
     }
 
     &__item{
         position: relative;
         padding: 20px;
-        width: 180px;
-        height: 110px;
-        background: #EEEDED; 
-        &:before {
-            content: url('../icons/services/plug 1.svg');
-            display: block;
-            position: absolute;
-            right: 0;
-            bottom: -5px;
-        }
+        width: 100%;
+        height: 90px;
+        border-radius: 5px;
+        border: 1px solid #fff;
     }   
     &__desc {
-        width: 135px;
-        font-size: 18px;
-        line-height: 22px;
+        width: 70%;
+        font-size: 22px;
+        line-height: 28px;
+        color: #fff;
         position: absolute;
         text-transform: capitalize;
     }
@@ -91,6 +78,7 @@
         grid-template-columns: repeat(2, auto);
         column-gap: 75px;
         justify-content: center;
+        align-items: center;
     }
     &__message {
         width: 620px;
