@@ -1,5 +1,9 @@
 # A landing page for a local electrician service
 
+## Link
+[Project on Github pages](https://tatianamoseeva.github.io/ingress-electrical/)
+
+![screenshot](img/screenshot.png)
 ## Features 
 
 :star: Responsive web design adapted to all screen sizes  
