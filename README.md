@@ -3,7 +3,7 @@
 ## Link
 [Project on Github pages](https://tatianamoseeva.github.io/ingress-electrical/)
 
-![screenshot](img/screenshot.png "First screen")
+![screenshot](https://github.com/TatianaMoseeva/ingress-electrical/blob/main/screenshot.png "First screen")
 
 ## Features 
 
